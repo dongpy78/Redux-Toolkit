@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 
 import { useSelector, useDispatch } from "react-redux";
 import { calculateTotals } from "./features/cart/cartSlice";
+import Modal from "./components/Modal";
 
 function App() {
   //! useSelector là một hook của React Redux dùng để truy xuất dữ liệu từ store Redux.
@@ -15,6 +16,7 @@ function App() {
   }, [cartItems]); //!  Khi cartItems thay đổi, useEffect sẽ được kích hoạt lại
   return (
     <main>
+      <Modal />
       <Navbar />
       <CartContainer />
     </main>
