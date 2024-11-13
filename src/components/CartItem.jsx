@@ -39,7 +39,7 @@ const CartItem = ({ id, img, title, price, amount }) => {
         <button
           className="amount-btn"
           onClick={() => {
-            if (amount === 1) {
+            if (amount === 0) {
               return;
             }
             dispatch(decrease({ id }));
